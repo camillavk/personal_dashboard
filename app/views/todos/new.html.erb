@@ -1,0 +1,10 @@
+<h2>Add a To Do list:</h2>
+
+<%= form_for @todo do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit "Create list" %>
+
+<% end %>

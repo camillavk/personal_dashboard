@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :locations
+
+  resources :todos, shallow: true do
+    resources :tasks
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
