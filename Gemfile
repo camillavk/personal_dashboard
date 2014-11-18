@@ -29,7 +29,7 @@ gem 'devise'
 
 gem 'barometer', '~> 0.9.7'
 
-gem 'rails12_factor'
+gem 'rails_12factor', group: :production
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
