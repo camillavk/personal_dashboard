@@ -12,8 +12,12 @@ Ruby on Rails, Rspec, Capybara
 
 ## Job List
 
-- [ ] 
-- [ ]
+- [x] Allow user to sign up, in and out
+- [x] Include Weather for user locations
+- [ ] Include Google Calender
+- [ ] Include Github commits
+- [ ] Include Twitter feed
+- [ ] Include Tasks list
 
 ## Favourite Code Snippet
 
