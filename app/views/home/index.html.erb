@@ -34,7 +34,14 @@
               <h3 class="panel-title"><%= todo.name %></h3>
             </div>
             <div class="panel-body">
-
+              <% if @tasks.any? %>
+                <% @tasks.each do |task| %>
+                <ul>
+                  <li><%= task.task %></li>
+                </ul>
+                <% end %>
+              <% end %>
+              <%= link_to "Add task", new_todo_task_path(todo) %>
             </div>
           </div>
         </div>
