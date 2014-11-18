@@ -29,7 +29,7 @@
     <% if @todos.any? %>
       <% @todos.each do |todo| %>
         <div class="col-md-6">
-          <div class="panel panel-info">
+          <div class="panel panel-success">
             <div class="panel-heading">
               <h3 class="panel-title"><%= todo.name %></h3>
             </div>
@@ -42,6 +42,27 @@
                 <% end %>
               <% end %>
               <%= link_to "Add task", new_todo_task_path(todo) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <% if @todos.any? %>
+      <% @todos.each do |todo| %>
+        <div class="col-md-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">Cats</h3>
+            </div>
+            <div class="panel-body">
+              <div class='cats'>
+                <a href="http://thecatapi.com"><img src="http://thecatapi.com/api/images/get?format=src&type=gif"></a>
+              </div>
             </div>
           </div>
         </div>
