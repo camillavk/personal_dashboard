@@ -26,6 +26,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'devise'
+
+gem 'barometer', '~> 0.9.7'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
