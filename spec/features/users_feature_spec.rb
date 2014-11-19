@@ -1,4 +1,7 @@
 require 'rails_helper'
+require_relative 'helpers/application'
+
+include ApplicationHelper
 
 context 'user not signed in and on the homepage' do
   it 'should see a sign up and sign in link' do
@@ -11,11 +14,7 @@ end
 context 'user signed in and on the homepage' do
   it 'should see a sign out link' do
     visit '/'
-    click_link 'Sign up'
-    fill_in 'Email', with: 'example@test.com'
-    fill_in 'Password', with: 'testtest'
-    fill_in 'Password confirmation', with: 'testtest'
-    click_button 'Sign up'
+    sign_up
     expect(page).to have_content 'Welcome'
     expect(page).to have_link 'Sign out'
     # expect(page).not_to have_link 'Sign in', exact: true

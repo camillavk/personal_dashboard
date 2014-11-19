@@ -1,8 +1,12 @@
 require 'rails_helper'
+require_relative 'helpers/application'
+
+include ApplicationHelper
 
 context 'To do list' do
   it 'should allow the user to create a To do list' do
     visit '/'
+    sign_up
     click_link 'Add To Do list'
     fill_in 'Name', with: 'Today'
     click_button 'Create list'
@@ -13,6 +17,7 @@ end
 context 'Tasks' do
   before do
     visit '/'
+    sign_up
     click_link 'Add To Do list'
     fill_in 'Name', with: 'Today'
     click_button 'Create list'
