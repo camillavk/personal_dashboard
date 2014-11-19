@@ -14,10 +14,13 @@ Ruby on Rails, Rspec, Capybara
 
 - [x] Allow user to sign up, in and out
 - [x] Include Weather for user locations
+- [x] Include Cat API
+- [x] Include Puppy API
 - [ ] Include Google Calender
 - [ ] Include Github commits
 - [ ] Include Twitter feed
 - [ ] Include Tasks list
+- [ ] Include Google News
 
 ## Favourite Code Snippet
 
