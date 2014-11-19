@@ -8,3 +8,22 @@
 body {
   padding-top: 60px;
 }
+
+.cats, .puppies {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.alert {
+  width: 95%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.alert h1 {
+  text-align: center;
+}
