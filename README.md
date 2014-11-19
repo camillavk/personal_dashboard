@@ -16,6 +16,7 @@ Ruby on Rails, Rspec, Capybara
 - [x] Include Weather for user locations
 - [x] Include Cat API
 - [x] Include Puppy API
+- [ ] Add cancancan for user abilities
 - [ ] Include Google Calender
 - [ ] Include Github commits
 - [ ] Include Twitter feed
