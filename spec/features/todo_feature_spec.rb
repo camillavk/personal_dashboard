@@ -12,6 +12,16 @@ context 'To do list' do
     click_button 'Create list'
     expect(page).to have_content 'Today'
   end
+
+  it 'should allow the user to delete a to do list' do
+    visit '/'
+    sign_up
+    click_link 'Add To Do list'
+    fill_in 'Name', with: 'Today'
+    click_button 'Create list'
+    click_link 'X'
+    expect(page).not_to have_content 'Today'
+  end
 end
 
 context 'Tasks' do
@@ -31,9 +41,13 @@ context 'Tasks' do
     expect(page).to have_content 'Win'
   end
 
-  it 'should allow the user to delete a to do list' do
+  it 'should allow the user to delete a task from the list' do
     visit '/'
-    click_link 'X'
-    expect(page).not_to have_content 'Today'
+    click_link 'Add task'
+    fill_in 'Task', with: 'Win'
+    click_button 'Add task'
+    click_link 'Task done!'
+    expect(page).not_to have_content 'Win'
   end
+
 end
