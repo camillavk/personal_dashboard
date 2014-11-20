@@ -30,4 +30,10 @@ context 'Tasks' do
     click_button 'Add task'
     expect(page).to have_content 'Win'
   end
+
+  it 'should allow the user to delete a to do list' do
+    visit '/'
+    click_link 'X'
+    expect(page).not_to have_content 'Today'
+  end
 end
