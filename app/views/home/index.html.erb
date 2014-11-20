@@ -1,4 +1,4 @@
-<% if user_signed_in? && @user_id = current_user %>
+<% if user_signed_in? %>
   <a href='/locations/new'>Add location</a>
   <a href='/todos/new'>Add To Do list</a>
 
@@ -6,10 +6,14 @@
     <div class="row">
       <% if @locations.any? %>
         <% @locations.each do |location| %>
+          <% if current_user.id == location.user_id %>
           <div class="col-md-6">
             <div class="panel panel-primary">
               <div class="panel-heading">
-                <h3 class="panel-title">Weather for <%= location.name %></h3>
+                <div class="panel-title">Weather for <%= location.name %></div>
+                <div class ='panel-close'>
+                  <%= link_to 'Remove location', location_path(location), method: :delete %>
+                </div>
               </div>
               <div class="panel-body">
                 <% barometer = Barometer.new(location.name) %>
@@ -20,6 +24,7 @@
               </div>
             </div>
           </div>
+          <% end %>
         <% end %>
       <% end %>
     </div>
@@ -29,6 +34,7 @@
     <div class="row">
       <% if @todos.any? %>
         <% @todos.each do |todo| %>
+        <% if current_user.id == todo.user_id %>
           <div class="col-md-6">
             <div class="panel panel-success">
               <div class="panel-heading">
@@ -49,6 +55,7 @@
               </div>
             </div>
           </div>
+          <% end %>
         <% end %>
       <% end %>
     </div>

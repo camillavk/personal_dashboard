@@ -11,6 +11,12 @@ class LocationsController < ApplicationController
     redirect_to '/'
   end
 
+  def destroy
+    @location = Location.find(params[:id])
+    @location.destroy
+    redirect_to '/'
+  end
+
 end
 
 def location_params
